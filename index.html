@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พรรคใหม่ | เดินไปด้วยกัน</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+        }
+        #backToTop:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a href="#home" class="navbar-brand text-white font-bold">
+                <img src="https://drive.google.com/uc?id=1q_R-paghowlujbCxUL4ZzBs_ufd_WKE1" alt="Logo พรรคใหม่" height="40">
+                พรรคใหม่
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#home" class="nav-link text-white">หน้าหลัก</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link text-white">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a href="#policies" class="nav-link text-white">นโยบาย</a></li>
+                    <li class="nav-item"><a href="#executive" class="nav-link text-white">คณะกรรมการบริหาร</a></li>
+                    <li class="nav-item"><a href="#news" class="nav-link text-white">ข่าวสาร</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link text-white">ติดต่อเรา</a></li>
+                    <li class="nav-item">
+                        <a href="สมัครสมาชิก.html" class="nav-link btn btn-outline-light ms-lg-3">
+                            สมัครสมาชิก
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="บริจาค.html" class="nav-link btn btn-outline-light ms-lg-3">
+                            บริจาค
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6 mb-4 order-md-2 text-center">
+                    <img src="https://drive.google.com/uc?id=1Tkw3wTBh28YjQ2BXd6aBo5C9Pk702kfJ" alt="Logo พรรคใหม่" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h1 class="display-4 text-primary mb-4">พรรคใหม่</h1>
+                    <p class="lead">เดินไปด้วยกัน กับ พรรคใหม่</p>
+                    <p>
+                        เราเป็นพรรคการเมืองที่เริ่มต้นด้วยการต่อสู้กับความไม่เป็นธรรมในสังคม
+                        เราต้องการแก้ไขปัญหาบ้านเมืองที่มีมาโดยตลอด
+                        ไม่ว่าจะเป็นการทุจริต คอรัปชั่น การใช้นโยบายต่างๆ
+                        ล้วนเกิดขึ้นจากข้าราชการและนักการเมือง
+                        เราเป็นประชาชนที่เห็นปัญหาบ้านเมืองมาโดยตลอด
+                        และไม่มีการแก้ไขอย่างจริงจัง
+                        ซึ่งสิ่งต่างๆ เหล่านี้นั้นส่งผลกระทบต่อประชาชนมาโดยตลอด
+                        เราจึงได้ผลักดันกันมาเป็นพรรคการเมืองในปัจจุบัน
+                    </p>
+                    <div class="mt-4">
+                        <a href="สมัครสมาชิก.html" class="btn btn-primary btn-lg">
+                            สมัครสมาชิก
+                        </a>
+                        <a href="บริจาค.html" class="btn btn-outline-light btn-lg ms-3">
+                            บริจาค
+                        </a>
+                        <a href="https://youtu.be/85oQ1aRDbMU" class="btn btn-outline-light btn-lg ms-3">
+                            ข้อควรรู้
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-dark">ช่องทางการมีส่วนร่วม</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">สมัครสมาชิก</h5>
+                            <p class="card-text">กรอกข้อมูลรายละเอียด</p>
+                            <a href="สมัครสมาชิก.html" class="btn btn-primary mt-auto">
+                                สมัครสมาชิก
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fas fa-comments fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">ติดต่อเรา</h5>
+                            <p class="card-text">กรอกข้อมูลรายละเอียด</p>
+                            <a href="#contact" class="btn btn-primary mt-auto">
+                                ติดต่อเรา
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fas fa-donate fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">บริจาค</h5>
+                            <p class="card-text">กรอกข้อมูลรายละเอียด</p>
+                            <a href="บริจาค.html" class="btn btn-primary mt-auto">
+                                บริจาค
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fab fa-youtube fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">ข้อควรรู้!!!</h5>
+                            <p class="card-text">เกี่ยวกับการเข้าเป็นสมาชิกพรรคการเมือง</p>
+                            <a href="https://youtu.be/85oQ1aRDbMU" class="btn btn-primary mt-auto">
+                                ดูคลิป
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fas fa-address-card fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">สถานะสมาชิก</h5>
+                            <p class="card-text">ตรวจสอบสถานะการเป็นสมาชิก</p>
+                            <a href="https://party.ect.go.th/checkidparty" class="btn btn-primary mt-auto">
+                                ตรวจสอบ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fas fa-balance-scale fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">สถานะพรรคใหม่</h5>
+                            <p class="card-text">ข้อมูลที่เชื่อมโยงกับ กกต.</p>
+                            <a href="https://party.ect.go.th/dataparty-detail/146" class="btn btn-primary mt-auto">
+                                ตรวจสอบ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fab fa-line fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Line @</h5>
+                            <p class="card-text">แจ้งให้ทราบเกี่ยวกับการทำงาน หรือข่าวสาร</p>
+                            <a href="https://lin.ee/hmeeCZx" class="btn btn-primary mt-auto">
+                                Line @
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="fab fa-facebook fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Facebook</h5>
+                            <p class="card-text">ข่าวสารและกิจกรรม</p>
+                            <a href="https://www.facebook.com/newwalktogether" class="btn btn-primary mt-auto">
+                                Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">เกี่ยวกับเรา</h2>
+            <div class="row">
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="https://drive.google.com/uc?id=1-wJnXOzFlJDff-S4BHYXrLFvWv2ZedLS" alt="รูปพรรค" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        พรรคใหม่ พรรคการเมืองที่ก่อตั้งขึ้นโดยกลุ่มคนรุ่นใหม่
+                        ที่ต้องการเห็นการเปลี่ยนแปลงทางการเมืองและสังคมไทย
+                        ให้ก้าวไปสู่ความเจริญรุ่งเรือง
+                        พรรคใหม่มุ่งมั่นที่จะทำงานเพื่อประชาชน
+                        ด้วยความซื่อสัตย์สุจริต โปร่งใส และตรวจสอบได้
+                    </p>
+                    <p>
+                        เราเชื่อมั่นว่า พลังของประชาชนคือหัวใจสำคัญ
+                        ในการสร้างอนาคตที่ดีกว่า
+                        ร่วมเดินทางไปกับเรา พรรคใหม่
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://www.facebook.com/newwalktogether" target="_blank" class="btn btn-primary">
+                    ติดตามเราบน Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="policies" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-dark">นโยบาย</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3>เศรษฐกิจ</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">สร้างเศรษฐกิจฐานรากให้เข้มแข็ง ส่งเสริม SME และ Startup</li>
+                            <li class="list-group-item">ลดความเหลื่อมล้ำ กระจายรายได้อย่างเป็นธรรม</li>
+                            <li class="list-group-item">ปฏิรูปภาษี ให้เป็นธรรม โปร่งใส</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3>สังคม</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">พัฒนาคุณภาพชีวิต ลดความเหลื่อมล้ำ</li>
+                            <li class="list-group-item">ปฏิรูปการศึกษา สร้างโอกาสที่เท่าเทียม</li>
+                            <li class="list-group-item">สร้างหลักประกันสุขภาพถ้วนหน้า เข้าถึงง่าย มีคุณภาพ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3>สิ่งแวดล้อม</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">อนุรักษ์ทรัพยากรธรรมชาติ ส่งเสริมการใช้พลังงานสะอาด</li>
+                            <li class="list-group-item">แก้ไขปัญหามลพิษ PM2.5 อย่างยั่งยืน</li>
+                            <li class="list-group-item">ส่งเสริมการพัฒนาที่ยั่งยืน เป็นมิตรต่อสิ่งแวดล้อม</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3>การเมือง</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">ปฏิรูปการเมือง สร้างประชาธิปไตยที่เข้มแข็ง โปร่งใส</li>
+                            <li class="list-group-item">ส่งเสริมธรรมาภิบาล ต่อต้านคอรัปชั่นอย่างจริงจัง</li>
+                            <li class="list-group-item">กระจายอำนาจสู่ท้องถิ่น</li>
+                            <li class="list-group-item">ส่งเสริมสิทธิมนุษยชน และเสรีภาพ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="executive" class="py-5">
+        <div class="container">
+            <h2 class="section-title">คณะกรรมการบริหารพรรค</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://drive.google.com/uc?id=1eYcKiyXvx4R12rWv4U8G5G2pWd5N_K4T" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">ร.ท.ปรีชาพล พงษ์พานิช</h5>
+                            <p class="card-text">หัวหน้าพรรค</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://drive.google.com/uc?id=10-D17V-qD3W8g3B194TqWq70Yq5s3LhV" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">นางสาว พรพรหม พรประภา</h5>
+                            <p class="card-text">กรรมการบริหารพรรค</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://drive.google.com/uc?id=10822K1q2rF8y7Q4tCU8v4lYpJ43T830f" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">นาย กฤษณ์ วัชรชัยกุล</h5>
+                            <p class="card-text">กรรมการบริหารพรรค</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://drive.google.com/uc?id=10ZtUBoQ5Y8J8L9o2s1P6V7NqU9Dq0tNn" class="card-img-top" alt="...">
+                        <div class="card-body">
+                                                       <h5 class="card-title text-primary">นาย อโนชา สกุลพันธ์</h5>
+                            <p class="card-text">กรรมการบริหารพรรค / เหรัญญิก</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://drive.google.com/uc?id=10Z5C59i1b1sG2X_iO8K78dU9_c-K2X21" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">นาย ธนกร วังบุญคงชนะ</h5>
+                            <p class="card-text">กรรมการบริหารพรรค</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://drive.google.com/uc?id=10MlgvH4l-X1L4D8Vq3U77lY0_hK_jN-f" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">นางสาว ณัฐรุจา ภัทรพงศธร</h5>
+                            <p class="card-text">กรรมการบริหารพรรค / นายทะเบียน</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="py-5">
+        <div class="container">
+            <h2 class="section-title">ข่าวสารพรรคใหม่</h2>
+            <div class="row" id="newsContainer">
+                <!-- ข่าวสารจะถูกโหลดที่นี่ -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-dark">ติดต่อเรา</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.5968712539984!2d100.450427514743!3d13.923027797053834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x71667d8185d9bdac!2zMTPCsDU1JzIyLjkiTiAxMDDCsDI3JzA5LjQiRQ!5e0!3m2!1sth!2sth!4v1667280129721!5m2!1sth!2sth"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        สำนักงานใหญ่พรรคใหม่ <br>
+                        76/61 (หมู่บ้านดีเยี่ยม) หมู่ 1 ถนนราชพฤกษ์ <br>
+                        ซอยท่าอิฐ แขวงท่าอิฐ เขตปากเกร็ด <br>
+                        นนทบุรี 11120
+                    </p>
+                    <p class="mt-4">
+                        โทร: 083-492-3508 <br>
+                        Email: newpartyofficial@gmail.com
+                    </p>
+
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">ชื่อของคุณ</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">อีเมลของคุณ</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">ข้อความ</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="button" onclick="submitForm()" class="btn btn-primary">
+                            ส่งข้อความ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-4">
+        <div class="container text-center">
+            © 2024 พรรคใหม่. สงวนลิขสิทธิ์
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        function loadNews() {
+            setTimeout(() => {
+                const newsData = [
+                    {
+                        date: "1 ธ.ค. 2567",
+                        message: "พรรคใหม่ เปิดตัวนโยบายเศรษฐกิจใหม่...",
+                        image: "https://via.placeholder.com/350x200", // URL รูปภาพ
+                        link: "https://www.example.com/news/1" // URL ข่าว
+                    },
+                    {
+                        date: "25 พ.ย. 2567",
+                        message: "ร่วมเดินไปกับเรา พรรคใหม่ ...",
+                        image: "https://via.placeholder.com/350x200", // URL รูปภาพ
+                        link: "https://www.example.com/news/2" // URL ข่าว
+                    },
+                    // เพิ่มข้อมูลข่าวอื่นๆ
+                ];
+                displayNews(newsData);
+            }, 1000);
+        }
+
+        function displayNews(newsData) {
+            var newsContainer = document.getElementById("newsContainer");
+            newsContainer.innerHTML = '';
+
+            newsData.forEach(news => {
+                var newsDiv = document.createElement('div');
+                newsDiv.classList.add("col-md-4", "mb-4");
+
+                var linkElement = document.createElement('a');
+                linkElement.href = news.link;
+                linkElement.classList.add("text-decoration-none");
+
+                var cardDiv = document.createElement('div');
+                cardDiv.classList.add("card");
+
+                var imgElement = document.createElement('img');
+                imgElement.src = news.image;
+                imgElement.classList.add("card-img-top");
+                imgElement.alt = "...";
+
+                var cardHeader = document.createElement('div');
+                cardHeader.classList.add("card-header", "bg-primary", "text-white");
+                cardHeader.textContent = news.date;
+
+                var cardBody = document.createElement('div');
+                cardBody.classList.add("card-body");
+
+                var titleElement = document.createElement('h5');
+                titleElement.classList.add("card-title");
+                titleElement.textContent = news.message;
+
+                linkElement.appendChild(imgElement);
+                linkElement.appendChild(titleElement);
+
+                cardBody.appendChild(linkElement);
+                cardDiv.appendChild(imgElement);
+                cardDiv.appendChild(cardHeader);
+                cardDiv.appendChild(cardBody);
+                newsDiv.appendChild(cardDiv);
+                newsContainer.appendChild(newsDiv);
+            });
+        }
+
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            var formData = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    onSuccess();
+                } else {
+                    alert('เกิดข้อผิดพลาดในการส่งข้อความ');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('เกิดข้อผิดพลาดในการส่งข้อความ');
+            });
+        }
+
+        function onSuccess() {
+            alert("ส่งข้อความเรียบร้อย");
+            document.getElementById("contactForm").reset();
+        }
+
+        // เรียกฟังก์ชัน loadNews เมื่อโหลดหน้าเว็บเสร็จ
+        window.onload = loadNews;
+
+        //  Back-to-Top Button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
