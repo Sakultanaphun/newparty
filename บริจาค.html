@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -14,8 +13,9 @@
     <title>บริจาค | พรรคใหม่</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
@@ -27,9 +27,6 @@
             text-align: center;
         }
     </style>
-    
-      
-    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -81,12 +78,34 @@
         </div>
     </section>
 
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">ข้อมูลการบริจาค</h2>
+            <table id="donationTable" class="display">
+                <thead>
+                    <tr>
+                        <th>ชื่อ</th>
+                        <th>อีเมล</th>
+                        <th>จำนวนเงิน</th>
+                        <th>ข้อความ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <footer class="bg-primary text-white py-4">
         <div class="container text-center">
             © 2024 พรรคใหม่. สงวนลิขสิทธิ์
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script>
         function submitDonationForm() {
             var name = document.getElementById("name").value;
@@ -113,6 +132,7 @@
                 if (data.result === 'success') {
                     alert("ขอบคุณสำหรับการบริจาค");
                     document.getElementById("donationForm").reset();
+                    loadDonationData();
                 } else {
                     alert('เกิดข้อผิดพลาดในการบริจาค');
                 }
@@ -122,9 +142,32 @@
                 alert('เกิดข้อผิดพลาดในการบริจาค');
             });
         }
+
+        function loadDonationData() {
+            fetch('YOUR_GOOGLE_APPS_SCRIPT_URL')
+                .then(response => response.json())
+                .then(data => {
+                    var table = $('#donationTable').DataTable();
+                    table.clear();
+                    data.forEach(donation => {
+                        table.row.add([
+                            donation.name,
+                            donation.email,
+                            donation.amount,
+                            donation.message
+                        ]).draw();
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        $(document).ready(function() {
+            $('#donationTable').DataTable();
+            loadDonationData();
+        });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    // เพิ่มในส่วนท้ายของทุกไฟล์ HTML ก่อนปิด </body>
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -139,135 +182,4 @@
     }
     </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บริจาค | พรรคใหม่</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <a href="index.html" class="navbar-brand text-white font-bold">
-                <img src="https://drive.google.com/uc?id=1q_R-paghowlujbCxUL4ZzBs_ufd_WKE1" alt="Logo พรรคใหม่" height="40">
-                พรรคใหม่
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="index.html#home" class="nav-link text-white">หน้าหลัก</a></li>
-                    <li class="nav-item"><a href="index.html#about" class="nav-link text-white">เกี่ยวกับเรา</a></li>
-                    <li class="nav-item"><a href="index.html#policies" class="nav-link text-white">นโยบาย</a></li>
-                    <li class="nav-item"><a href="index.html#executive" class="nav-link text-white">คณะกรรมการบริหาร</a></li>
-                    <li class="nav-item"><a href="index.html#news" class="nav-link text-white">ข่าวสาร</a></li>
-                    <li class="nav-item"><a href="index.html#contact" class="nav-link text-white">ติดต่อเรา</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <section class="py-5">
-        <div class="container">
-            <h2 class="section-title">บริจาค</h2>
-            <form id="donationForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">ชื่อของคุณ</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">อีเมลของคุณ</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="amount" class="form-label">จำนวนเงินที่บริจาค</label>
-                    <input type="number" class="form-control" id="amount" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">ข้อความ (ถ้ามี)</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
-                </div>
-                <button type="button" onclick="submitDonationForm()" class="btn btn-primary">
-                    บริจาค
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-primary text-white py-4">
-        <div class="container text-center">
-            © 2024 พรรคใหม่. สงวนลิขสิทธิ์
-        </div>
-    </footer>
-
-    <script>
-        function submitDonationForm() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var amount = document.getElementById("amount").value;
-            var message = document.getElementById("message").value;
-
-            var formData = {
-                name: name,
-                email: email,
-                amount: amount,
-                message: message
-            };
-
-            fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
-                method: 'POST',
-                body: JSON.stringify(formData),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    alert("ขอบคุณสำหรับการบริจาค");
-                    document.getElementById("donationForm").reset();
-                } else {
-                    alert('เกิดข้อผิดพลาดในการบริจาค');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('เกิดข้อผิดพลาดในการบริจาค');
-            });
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
-              .then(registration => {
-                console.log('ServiceWorker registration successful');
-              })
-              .catch(err => {
-                console.log('ServiceWorker registration failed: ', err);
-              });
-          });
-        }
-        </script>
-</body>
->>>>>>> 5a43c3431871e4aba2ae5025f764335786be7103
 </html>
