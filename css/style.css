@@ -1,5 +1,15 @@
-﻿body {
+﻿:root {
+    --primary-color: #00205B;
+    /* Navy Blue */
+    --secondary-color: #E31837;
+    /* Red */
+    --light-color: #FFFFFF;
+    --hover-color: #001233;
+}
+
+body {
     font-family: 'Kanit', sans-serif;
+    background-color: var(--light-color);
 }
 
 .section-title {
@@ -10,6 +20,10 @@
 
 .navbar-brand img {
     height: 40px;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
 }
 
 .card {
@@ -25,9 +39,42 @@
     font-size: 1rem;
 }
 
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+.btn-danger {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
 footer {
     background-color: #007bff;
     color: white;
     padding: 1rem 0;
     text-align: center;
+}
+
+
+/* Add responsive data table styles */
+
+.dataTables_wrapper {
+    @apply w-full overflow-x-auto;
+}
+
+
+/* AI Analysis Section */
+
+.ai-analysis {
+    @apply bg-gray-50 p-4 rounded-lg shadow-md;
+}
+
+.ai-analysis-card {
+    @apply bg-white p-4 rounded-lg shadow transition-all hover: shadow-lg;
 }
